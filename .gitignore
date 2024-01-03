@@ -1,0 +1,36 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/frontend/sre-frontend/node_modules
+/frontend/sre-frontend/.pnp
+/frontend/sre-frontend/.pnp.js
+/frontend/sre-frontend/.yarn/install-state.gz
+
+# testing
+/frontend/sre-frontend/coverage
+
+# next.js
+/frontend/sre-frontend/.next/
+/frontend/sre-frontend/out/
+
+# production
+/frontend/sre-frontend/build
+
+# misc
+/frontend/sre-frontend/.DS_Store
+/frontend/sre-frontend/*.pem
+
+# debug
+/frontend/sre-frontend/npm-debug.log*
+/frontend/sre-frontend/yarn-debug.log*
+/frontend/sre-frontend/yarn-error.log*
+
+# local env files
+/frontend/sre-frontend/.env*.local
+
+# vercel
+/frontend/sre-frontend/.vercel
+
+# typescript
+/frontend/sre-frontend/*.tsbuildinfo
+/frontend/sre-frontend/next-env.d.ts
