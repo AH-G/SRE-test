@@ -1,4 +1,3 @@
-
 from flask import Flask,jsonify,send_file,request
 import requests
 from PIL import Image

@@ -34,3 +34,5 @@
 # typescript
 /frontend/sre-frontend/*.tsbuildinfo
 /frontend/sre-frontend/next-env.d.ts
+
+/frontend/flask-server/venv
