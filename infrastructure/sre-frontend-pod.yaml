@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sre-frontend
+spec:
+  containers:
+  - name: sre-frontend
+    image: detectiveahg/sre-frontend
+    ports:
+    - containerPort: 8080

@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sre-frontend-svc
+  namespace: application
+  labels:
+    app: sre-frontend
+  annotations:
+    networking.gke.io/max-rate-per-endpoint: "20"
+spec:
+  selector:
+    app: sre-frontend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: http
+      name: http

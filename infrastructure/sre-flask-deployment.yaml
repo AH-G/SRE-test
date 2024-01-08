@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sre-flask
+  labels:
+    app: sre-flask
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sre-flask
+  template:
+    metadata:
+      labels:
+        app: sre-flask
+    spec:
+      containers:
+      - name: sre-flask
+        image: detectiveahg/sre-flask:v1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080

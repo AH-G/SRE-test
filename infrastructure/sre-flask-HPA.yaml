@@ -1,0 +1,22 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: sre-flask-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: sre-flask
+  minReplicas: 1
+  maxReplicas: 20
+  metrics:
+  - type: Object
+    object:
+      describedObject:
+        kind: Service
+        name: sre-frontend-svc
+      metric:
+        name: "autoscaling.googleapis.com|gclb-capacity-utilization"
+      target:
+        averageValue: 70
+        type: AverageValue

@@ -1,0 +1,14 @@
+kind: HTTPRoute
+apiVersion: gateway.networking.k8s.io/v1beta1
+metadata:
+  name: sre-frontend-route
+  namespace: application
+  labels:
+    gateway: sre-frontend-gw
+spec:
+  parentRefs:
+  - name: sre-frontend-gw
+  rules:
+  - backendRefs:
+    - name: sre-frontend-svc
+      port: 80
