@@ -1,6 +1,6 @@
 # SRE-Test
 
-Welcome to the GitHub repository of SRE-test, an end-to-end solution to optimally resize the images. This README provides all the information regarding the design, the approaches and the infrastructure considered to run this solution in the production environment.
+Welcome to the GitHub repository of SRE-test, an end-to-end solution to optimally resize the images. This README provides all the information regarding the design, the approaches and the infrastructure considered to run this solution in the production environment. 
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -17,6 +17,8 @@ The solution is designed as a microservice and therefore dockerfiles are include
 
 The solution eventually is deployed on the GKE cluster with pod autoscaling and node autoscaling enabled. The solution also implements metrics collection at the application level. These metrics are then collected by Prometheus to calculate the current load in terms of Requests per second at all endpoints.
 These metrics are eventually by the HorizontalPodAutoScaler to scale the pods within the cluster. 
+
+Disclaimer: This solution is only tested on ubuntu server and GKE clusters. 
 
 ## Features
 - Image resizer
@@ -58,6 +60,17 @@ After that you can use this API route as the source within your image tag.
 ```
 
 ## Testing Guide
+
+You can perform the loadtesting on this solution by using the k6 load testing tool. The k6 testing script is also included in the repo.
+
+- Navigate to the load-test directory
+- Install k6 by running the k6-installation.sh script
+- navigate to load-test/k6 directory.
+- Use the following command to run the test.
+
+```
+k6 run script.js
+```
 
 ## Considered Approaches
 
