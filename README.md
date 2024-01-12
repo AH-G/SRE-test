@@ -46,7 +46,16 @@ kubectl -n application create configmap --from-literal=NEXT_PUBLIC_IMAGE_URL={pa
 
 ## Developer's Guide
 
-In order to use this API route in your application, 
+In order to use this API route in your NextJS application, make sure to include [...params].js file under /api/resizer/image directory. Also copy the metrics.js file under /api directory. Install node-fetch and prom-client by using the following command
+
+```
+npm install prom-client node-fetch
+```
+
+After that you can use this API route as the source within your image tag. 
+```
+<img src=“/resizer/image/width=80,quality=75/https://s3.example.com/bucket/image.png”>
+```
 
 ## Testing Guide
 
