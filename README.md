@@ -6,6 +6,8 @@ Welcome to the GitHub repository of SRE-test, an end-to-end solution to optimall
 - [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation)
+- [Developer's Guide](#developer-guide)
+- [Testing Guide](#testing-guide)
 - [Considered Approaches](#considered-approaches)
 
 ## Introduction
@@ -32,6 +34,11 @@ To deploy SRE-TEST, follow these steps:
 4. navigate to the infrastructure/installation/ directory.
 5. run the install.sh script
 
+## Developer's Guide
+
+In order to use this API route in your application, 
+
+## Testing Guide
 
 ## Considered Approaches
 
