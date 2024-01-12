@@ -37,6 +37,7 @@ sudo apt-get install helm
 
 # deployment of the frontend application. 
 
+kubectl -n application create configmap NEXT_PUBLIC_IMAGE_URL --from-literal=NEXT_PUBLIC_IMAGE_URL='https://oyster.ignimgs.com/mediawiki/apis.ign.com/the-legend-of-zelda-breath-of-the-wild-2/3/38/Link2.png?width=1024'
 kubectl apply -f ../frontend-nextjs/
 
 # deployment of flask application 
