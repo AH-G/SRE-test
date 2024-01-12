@@ -25,9 +25,12 @@ These metrics are eventually by the HorizontalPodAutoScaler to scale the pods wi
 - Automatic node scaling based on the Hardware resources. 
 
 ## Installation
-To install MyApp, follow these steps:
-
-1. Clone the repository:
+To deploy SRE-TEST, follow these steps:
+1. clone the repo.
+2. Make sure that cluster has been setup in your GKE account.
+3. Make sure to note down the project ID, cluster zone ID and the cluster name as they would be required to connect gcloud CLI utility with your cluster.
+4. navigate to the infrastructure/installation/ directory.
+5. run the install.sh script
 
 
 ## Considered Approaches
