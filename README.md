@@ -18,7 +18,7 @@ The solution is designed as a microservice and therefore dockerfiles are include
 The solution eventually is deployed on the GKE cluster with pod autoscaling and node autoscaling enabled. The solution also implements metrics collection at the application level. These metrics are then collected by Prometheus to calculate the current load in terms of Requests per second at all endpoints.
 These metrics are eventually by the HorizontalPodAutoScaler to scale the pods within the cluster. 
 
-Disclaimer: This solution is only tested on ubuntu server and GKE clusters. 
+**Disclaimer: This solution is only tested on ubuntu server and GKE clusters. **
 
 ## Features
 - Image resizer
