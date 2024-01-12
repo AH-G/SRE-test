@@ -34,6 +34,16 @@ To deploy SRE-TEST, follow these steps:
 4. navigate to the infrastructure/installation/ directory.
 5. run the install.sh script
 
+Note: Application takes image url from the environment variable within the container. This is supplied through the configmap which also gets created from the installation script. The default image used is given below. 
+
+https://oyster.ignimgs.com/mediawiki/apis.ign.com/the-legend-of-zelda-breath-of-the-wild-2/3/38/Link2.png?width=1024
+
+However, in order to change the image, change the configmap configuration within the installation script or change the configmap within the cluster. Current configmap is created as follows. 
+
+```
+kubectl -n application create configmap --from-literal=NEXT_PUBLIC_IMAGE_URL={paste your url here}
+```
+
 ## Developer's Guide
 
 In order to use this API route in your application, 
