@@ -6,7 +6,7 @@ Welcome to the GitHub repository of SRE-test, an end-to-end solution to optimall
 - [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation)
-- [Considered Approaches](#ConsideredApproaches)
+- [Considered Approaches](#considered-approaches)
 
 ## Introduction
 SRE-Test is built with a focus on user-friendliness, efficiency, and scalability. It leverages the latest web and infrastrcuture technologies to make sure that the solution is fully optimized and cost effective. 
