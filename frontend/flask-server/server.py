@@ -18,12 +18,6 @@ metric = Counter('python_request_operations_total', 'The total number of process
 def checking():
     return ("Hello World First page")
 
-@app.route("/api/home", methods=['GET'])
-def return_home():
-    return jsonify({
-        'message':"Hello World",
-        'people': ["jack","sparrow", "Barry"]
-        })
 
 @app.route("/metrics")
 def requests_count():
@@ -31,15 +25,14 @@ def requests_count():
     res.append(prometheus_client.generate_latest(metric))
     return Response(res, mimetype="text/plain")
 
-@app.route('/resizer/image/width=<int:width>,quality=<int:quality>/<path:image_url>')
+@app.route('/resizer/image/width=<int:width>,quality=<int:quality>/<path:image_url>', methods=['GET'])
 def resize_image(width, quality,image_url):
     metric.inc()
     width_var=request.view_args["width"]
     quality_var=request.view_args["quality"]
     print('width is' + str(width_var))
     print("quality is " + str(quality))
-    # Construct the full URL
-    #full_url = 'https://' + image_url
+    
     full_url=image_url
     if not image_url.startswith(('http://', 'https://')):
         full_url = 'https://' + image_url
@@ -63,5 +56,5 @@ def resize_image(width, quality,image_url):
 
 if __name__ == "__main__":
     app.run(debug=True, port=8080, host='0.0.0.0')
-#/<path:image_url>
+
 
